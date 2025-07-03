@@ -17,10 +17,3 @@ def sm(c1, c2):
 print(matrix_1)
 print(matrix_2)
 print(matrix_1, matrix_2)
-
-
-
-
-
-
-
