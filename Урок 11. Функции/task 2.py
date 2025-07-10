@@ -53,6 +53,15 @@ def fine_pet(pets):
     else:
         print(f"\nПитомец с кличкой '{name}' не найден.\n")
 
+def delete_pet(pets):
+    name = input('Введите имя питомца которого нужно удалить ')
+    if name in pets:
+        delete = pets[name]
+        print(f'питомец {name} удален')
+    else:
+        print(f"\nПитомец с кличкой '{name}' не найден.\n")
+
+
 def main():
 
     while True:
@@ -60,8 +69,9 @@ def main():
         print('1. Добавить питомца')
         print('2. Список питомцев')
         print('3. Поиск питомца')
-        print('4. Выход')
-        choice = input('Выберите действие (1 - 4): ')
+        print('4. Удалить питомца')
+        print('5. Выход')
+        choice = input('Выберите действие (1 - 5): ')
 
         if choice == '1':
             add_pet(pets)
@@ -70,6 +80,8 @@ def main():
         elif choice == '3':
             fine_pet(pets)
         elif choice == '4':
+            delete_pet(pets)
+        elif choice == '5':
             print('Выход')
             break
         else:
